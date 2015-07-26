@@ -1,0 +1,46 @@
+---
+title: "Codebook"
+author: "Der_Schulze"
+date: "26. Juli 2015"
+output: html_document
+---
+#Study Design and data processing
+##Collection of the raw data
+The data was collected by Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto and Xavier Parra via a video-taped experiment with 30 participants. The participants had to performe six acitivities wearing a smartphone on their waist. The research team recordet 3-axial linear accelation and 3.axial angular velocity at a constant rate of 50Hz. The participants where splitted in a test-group (30 %) and a train-group (70 %). The data was processed by appling nose filters and sampled in 2.56 sec. windows. Finally the data was normalized within [-1,1] 
+
+For further information on the collection and procession of the raw data please refere to: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
+
+#The "run_analysis.txt" Dataset
+##How to create the tidy dataset
+Just put the run_analysis.R file and the "UCI HAR Dataset" folder with the raw data in your workspace and perform the r-script.
+
+A description on the functionality of the script can be found in the "ReadMe.md".
+
+##Describtion of the variables
+
+###Variable No. 1 
+The first variable refers to the subject that participated in the experiment. It ranges from 1 to 30.
+
+###Variable No. 2
+The second variable refers to the acitivity for which the other variables are measured.
+
+###Group-Means-Variables 3-81
+The variables 3-81 represent the average of every mean- and standard derivation-measurement for each activity and subject. 
+
+These variables have describtive names. In the following the meaning of each string is presented in chronological order:
+
+| String | Description |
+|---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Group_Mean_ | The prefix "Group_Mean_" refers on the fact that each variable represents the average of the measurement for each subject and individual. |
+| "t" or "f" | The "t" prefix refers to time-domain signals and the "f" prefix tells that the data was processed via a Fast Fourier Transform (FFT). |
+| "Body" or "Gravity" | The "Body" string indicates the body signal whereas the "Gravity" string represents the gravity signal. |
+| "Acc" or "Gyro" | These strings indicates wheter the signal was captured via the accelerometer ("Acc") or the gyroscope ("Gyro"). |
+| "Jerk" | The "Jerk" string indicates that the body linear acceleration and angular velocity were derived in time to obtain Jerk-Signals. |
+| "Mag" | Mag stands for the magnitude. These magnitudes were calculated using the Euclidean norm. |
+| "mean()", "std()", "meanFreq()" | These strings indicate that these values were estimated from the original signals and represents the mean ("mean()"), the standard derivation ("std()") or the mean frequency ("meanFreq()") of these values. |
+| "-X", "-Y", "-Z" | This last sufix denotes the direction of the 3-axial-signal. |
+
+#Sources
+For further (more technological) description please refere to the original dataset and descrition: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. A Public Domain Dataset for Human Activity Recognition Using Smartphones. 21th European Symposium on Artificial Neural Networks, Computational Intelligence and Machine Learning, ESANN 2013. Bruges, Belgium 24-26 April 2013.
