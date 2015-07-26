@@ -27,13 +27,13 @@ original UCI HAR Dataset. After this it loads the values for the
 variable-values, the activity-values and the participant-ids from the
 original dataset. After that the code lables the variable accordingly to
 the loaded original variable-names. That ensures descriptive variable
-names. After that the dataset is subsettet to only include the variables
+names. After that the dataset is subsetted to only include the variables
 that describe means and standard derivations. Finally it combines the
 variables with the acitivities (including the factor-labelings) and the
 participants-ids.
 
 This steps are executed respectivly for the data from the test-group
-(Lines 2-19) and the train-group (Lines 21-35). After that the code
+(Lines 2-19 in the code) and the train-group (Lines 21-35). After that the code
 combines the two groups into one complete dataset (Lines 37-39).
 
 Finally the code performs a group-comparison of the average of each
